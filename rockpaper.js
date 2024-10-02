@@ -9,14 +9,14 @@ const computerChoiceSpan = document.getElementById('computer-choice');
 const resetButton = document.getElementById('reset');
 const choices = document.querySelectorAll('.choice');
 
-// Function to get computer's random choice
+
 function getComputerChoice() {
     const choices = ['rock', 'paper', 'scissors'];
     const randomIndex = Math.floor(Math.random() * 3);
     return choices[randomIndex];
 }
 
-// Function to determine the winner
+
 function determineWinner(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
         return 'It\'s a tie!';
@@ -33,7 +33,6 @@ function determineWinner(playerChoice, computerChoice) {
     }
 }
 
-// Function to update the game state
 function updateGame(playerChoice) {
     const computerChoice = getComputerChoice();
     
@@ -50,7 +49,6 @@ function updateGame(playerChoice) {
     computerScoreSpan.textContent = computerScore;
 }
 
-// Event listeners for player choice buttons
 choices.forEach(choice => {
     choice.addEventListener('click', () => {
         const playerChoice = choice.id;
